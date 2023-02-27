@@ -1,17 +1,24 @@
 ﻿// Напишите программу, которая на вход принимает
 // число и на выходе показывает 
 // третью цифру  этого числа или сообщает, что третьей цифры нет
-Console.WriteLine("Введите число:");
-int number = Convert.ToInt32(Console.ReadLine());
-if (number >= 100) ;
-while (number >= 999)
+int Cykl(int num)
 {
-  number = number / 10;
-  number++;
+  while (num > 999)
+  {
+    num=num / 10;
+    num++;
+  }
+  return num%10;
 }
-
-else Console.WriteLine("Вы ввели не трехзначное число!");
-int result = number % 10;
-Console.WriteLine(result);
-
-
+  Console.WriteLine("Введите число:");
+  int number = Convert.ToInt32(Console.ReadLine());
+  bool Threedigit(int number2)
+  {
+    return number2 < 100;
+  }
+int result = Cykl(number);
+  if (Threedigit (number)) Console.WriteLine(" число не трехзначное !"); 
+  Console.WriteLine(result);
+   
+  
+  
