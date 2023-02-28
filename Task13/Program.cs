@@ -6,7 +6,6 @@ int Cykl(int num)
   while (num > 999)
   {
     num=num / 10;
-    num++;
   }
   return num%10;
 }
