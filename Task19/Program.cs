@@ -5,7 +5,7 @@
 int Cykle(int num)
 {
   int newNum = 0;
-     while (num>0)
+     while (num!=0)
   {
     int intermediate=num % 10;
     num=num / 10;
