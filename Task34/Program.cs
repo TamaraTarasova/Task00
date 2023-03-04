@@ -1,6 +1,6 @@
-﻿// Задайте одномерный массив из 123 случайных чисел.
-// найдите количество элементов массива, значения которых лежат
-//  в отрезке[10,99]
+﻿// Задайте массив заполненный случайными положительными трёхзначными числами.
+//  Напишите программу, которая покажет количество чётных чисел в массиве.
+// [345, 897, 568, 234] -> 2
 
 int[] CreateArrayRndInt(int size, int min, int max)
 {
@@ -25,18 +25,19 @@ void PrintArray(int[] arr)
 }
 
 
-int CountTwoSignArray(int[] arr)
+int CountEvenNumberArray(int[] arr)
 {
   int count = 0;
   for (int i = 0; i <arr.Length; i++)
   {
-    if (arr[i]<100 && arr[i] >10) count++;
+    if (arr[i] % 2 == 0) count++;
   }
   return count;
 }
 
-int[] array = CreateArrayRndInt(123, 0, 1000);
+int[] array = CreateArrayRndInt(50, 100, 1000);
 PrintArray(array);
 Console.WriteLine();
-int countTwoSignArray = CountTwoSignArray(array);
-Console.WriteLine(countTwoSignArray);
+int countEvenNumberArray = CountEvenNumberArray(array);
+Console.WriteLine(countEvenNumberArray);
+
