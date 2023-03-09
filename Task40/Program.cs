@@ -5,11 +5,11 @@
 // Теорема о неравенстве треугольника: каждая сторона треугольника
 // меньше суммы двух других сторон.
 Console.WriteLine("Введите число 1:");
-int X = Console.ReadLine();
+int X = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число 2:");
-int y = Console.ReadLine();
+int y = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число 3:");
-int z = Console.ReadLine();
+int z = Convert.ToInt32(Console.ReadLine());
 
 // int NumberInput(string msg)
 
@@ -24,3 +24,6 @@ bool InequalityTriangle(int a1, int b1, int c1)
     if (a1 >= b1 + c1 || b1 >= a1 + c1 || c1 >= a1 + b1) return true;
     else return false;
 }
+
+bool result=InequalityTriangle(X, y, z);
+Console.WriteLine(result?"Да":"Нет");
